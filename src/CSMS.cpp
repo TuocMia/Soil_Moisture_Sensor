@@ -9,6 +9,7 @@ void Start(){
 }
     
 void Measurement(){
+    analogReadResolution(8);
     MoistureValue = analogRead(Sensor_pin); 
     Serial.print(MoistureValue);
 if (MoistureValue > WaterValue && MoistureValue < (WaterValue + intervals))
